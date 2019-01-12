@@ -1,0 +1,5 @@
+lane :test do
+  fastlane rest_pull user_name:"api" password:"token" project:"project" resource:"resource" lang_code:"lang_code" path:"path"
+  fastlane cli_pull
+  fastlane cli_push
+end
