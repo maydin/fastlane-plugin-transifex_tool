@@ -5,6 +5,16 @@ module Fastlane
   module Actions
     class CliPullAction < Action
       def self.run(params)
+        begin
+             sh "tx", "--version"
+        rescue => ex
+             UI.user_error!("Please install transifex cli client https://docs.transifex.com/client/introduction.")
+        end
+
+        unless File.exist?("../.tx/config")
+             UI.user_error!("Make sure you initialized transifex.")
+        end
+
         sh "tx","pull", "-a", "-f", "--mode=reviewed" do |status, result, command|
           unless status.success?
             UI.error "Command #{command} (pid #{status.pid}) failed with status #{status.exitstatus}"
