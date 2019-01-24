@@ -12,7 +12,7 @@ module Fastlane
              UI.user_error!("Please install transifex cli client https://docs.transifex.com/client/introduction.")
         end
 
-        unless File.exist?("../.tx/config")
+        unless File.exist?(".tx/config")
              UI.user_error!("Make sure you initialized transifex.")
         end
         

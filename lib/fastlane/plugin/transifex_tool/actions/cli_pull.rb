@@ -11,7 +11,7 @@ module Fastlane
              UI.user_error!("Please install transifex cli client https://docs.transifex.com/client/introduction.")
         end
 
-        unless File.exist?("../.tx/config")
+        unless File.exist?(".tx/config")
              UI.user_error!("Make sure you initialized transifex.")
         end
 
@@ -37,7 +37,8 @@ module Fastlane
 
       def self.details
         # Optional:
-        "Transifex tool that pulls translations using transifex rest api. It also wraps transifex cli client for pull and push."
+        "Transifex tool that pulls translations using transifex rest api. It also wraps transifex cli client for pull and push.
+        Make sure transifex cli is installed and ~/.transifexrc file has correct permissions."
       end
 
       def self.available_options
