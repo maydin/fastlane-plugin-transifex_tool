@@ -3,7 +3,7 @@ require_relative '../helper/transifex_tool_helper'
 
 module Fastlane
   module Actions
-    class RestPulllAction < Action
+    class RestPullAction < Action
       def self.run(params)
         require 'net/http'
 
