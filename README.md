@@ -14,10 +14,7 @@ fastlane add_plugin transifex_tool
 
 Transifex tool that pulls translations using transifex rest api. It is also a wrapper for cli client tool for pull and push commands.
 
-
-## Example
-
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
+## Actions
 
 ### cli_pull
 This action is running `tx pull -a -f --mode=reviewed` command.
@@ -31,6 +28,10 @@ This action is for downloading translations using transifex rest api. Path for t
 Transifex user_name and password could be used and also a token could be used for rest api calls. If you want to use token, user_name should be `api` and password should be the token.
 
 `rest_pull(user_name:"api", password:"token", project:"project", resource:"resource", lang_code:"lang_code", path:"path")`
+
+## Example
+
+Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
 ## Run tests for this plugin
 
