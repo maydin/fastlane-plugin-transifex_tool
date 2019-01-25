@@ -1,5 +1,11 @@
-lane :test do
-  fastlane rest_pull user_name:"api" password:"token" project:"project" resource:"resource" lang_code:"lang_code" path:"path"
-  fastlane cli_pull
-  fastlane cli_push
+lane :tf_rest_pull do
+  rest_pull(user_name:"api", password:"token", project:"project", resource:"resource", lang_code:"lang_code", path:"path")
+end
+
+lane :tf_cli_pull do
+	cli_pull
+end
+
+lane :tf_cli_push do
+	cli_push
 end
