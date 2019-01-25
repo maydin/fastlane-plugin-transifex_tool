@@ -19,6 +19,18 @@ Transifex tool that pulls translations using transifex rest api. It is also a wr
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
+### cli_pull
+This action is running `tx pull -a -f --mode=reviewed` command.
+
+### cli_push
+This action is running `tx push -s -f` command.
+
+### rest_pull
+This action is for downloading translations using transifex rest api. Path for the saving the translations could be an absolute path or a relative path. In case of a relative path, note that every action and every plugin's code runs in the root of the project, while all user code from the Fastfile runs inside the ./fastlane directory.
+
+Transifex user_name and password could be used and also a token could be used for rest api calls. If you want to use token, user_name should be `api` and password should be the token.
+
+`rest_pull(user_name:"api", password:"token", project:"project", resource:"resource", lang_code:"lang_code", path:"path")`
 
 ## Run tests for this plugin
 
