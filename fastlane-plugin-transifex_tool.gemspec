@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'maydin@gmail.com'
 
   spec.summary       = 'Transifex tool that pulls translations using transifex rest api'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-transifex_tool"
+  spec.homepage      = "https://github.com/maydin/fastlane-plugin-transifex_tool"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
